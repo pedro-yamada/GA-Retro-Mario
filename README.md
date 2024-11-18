@@ -21,7 +21,7 @@ pip install -r requirements.txt
 Execute a seguinte célula após o download e cópia do jogo
 
 ```sh
-python -m retro.import .
+cp rom.sfc ~/anaconda3/envs/<ENV_NAME>/lib/python3.7/site-packages/retro/data/stable/SuperMarioWorld-Snes/
 ```
 
 ### Execute o script de teste

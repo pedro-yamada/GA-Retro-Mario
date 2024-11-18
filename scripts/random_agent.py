@@ -5,7 +5,7 @@ Script de teste default para verificar funcionamento do enviroment e do jogo
 import retro
 
 def main():
-    env = retro.make(game='SuperMarioWorld2-Snes')
+    env = retro.make(game='SuperMarioWorld-Snes')
     obs = env.reset()
     while True:
         obs, rew, done, info = env.step(env.action_space.sample())
