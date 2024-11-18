@@ -2,7 +2,7 @@
 Repositório dedicado ao desenvolvimento de um agente inteligente para resolver a fase YoshiIsland do Super Mario World 2.
 
 Projeto dedicado à disciplina _Inteligência Artificial_, da _Universidade Federal do ABC_.
-
+# Modelo utilizado: Neat
 ## Instalação
 
 Primeiramente, estamos utilizando o Python na versão `3.7.16`
