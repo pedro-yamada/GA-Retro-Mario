@@ -80,7 +80,7 @@ sendo:
 * `restore checkpont`: Caminho do checkpoint utilizado para continuar o treino, caso `None` treinamos do zero
 
 # Carregando modelo para jogar
-script modelo em: `scripts/run_winner.py`
+script modelo em: `scripts/play.py`
 
 ## Passo 1: Carregue o genoma com o pickle:
 ```py

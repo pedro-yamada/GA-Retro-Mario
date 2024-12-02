@@ -6,12 +6,12 @@ evolution_algorithm = Evolution(
     config_file= 'config-feedfoward.txt',
     checkpoint_path= 'checkpoints',
     best_path = 'best_models',
-    best_name = 'best_individual',
+    best_name = 'best_individual_RUN2',
     render = True
 )
 
 evolution_algorithm.run(
-    num_generations = 20,
+    num_generations = 25,
     checkpoint_interval = 5,
-    restore_checkpoint = None ## Caso queira usar um checkpoint, passar o caminho do checkpoint salvo
+    restore_checkpoint = 'checkpoints/neat-checkpoint-19' ## Caso queira usar um checkpoint, passar o caminho do checkpoint salvo
 )
