@@ -1,3 +1,4 @@
+import neat.config
 import numpy as np
 import retro
 import neat
@@ -11,25 +12,29 @@ class Worker:
                  game_name : str,
                  phase_name : str,
                  genome : neat.genome.DefaultGenome,
-                 config_file_path : str
+                 config_file_path : str,
+                 config_neat : neat.Config = None
                  ) -> None:
         self.game_name = game_name
         self.phase_name = phase_name
         self.genome = genome
         self.config_file = config_file_path
+        
+        self.config_neat = config_neat
     
     def get_neural_network(self):
-        return neat.nn.recurrent.RecurrentNetwork.create(self.genome, self.config_file)
-    
-    def eval_genome(self, render = True):
-        self.env = retro.make(self.game_name, self.phase_name)
         
-        self.env.reset()
+        if self.config_neat is None:
+            return neat.nn.recurrent.RecurrentNetwork.create(self.genome, self.config_file)
+        else:
+            return neat.nn.recurrent.RecurrentNetwork.create(self.genome, self.config_neat)
+    
+    def eval_genome(self, env : retro.RetroEnv, render = True):
+                
+        ob = env.reset()
+        ac = env.action_space.sample()
 
-        ob = self.env.reset()
-        ac = self.env.action_space.sample()
-
-        iny, inx, inc = self.env.observation_space.shape
+        iny, inx, inc = env.observation_space.shape
 
         inx = int(inx/8)
         iny = int(iny/8)
@@ -59,7 +64,7 @@ class Worker:
 
         while not done:
             if render:
-                self.env.render()
+                env.render()
                 
             frame += 1
 
@@ -70,7 +75,7 @@ class Worker:
             imgarray = ob.flatten()
             nnOutput = net.activate(imgarray)   
             
-            ob, rew, done, info = self.env.step(nnOutput)        
+            ob, rew, done, info = env.step(nnOutput)        
 
             score = info['score']
             coins = info['coins']
@@ -154,5 +159,7 @@ class Worker:
             if dead == 0:
                 fitness_current -= 100
                 done = True 
-
+                
+        self.genome.fitness = fitness_current
+        
         return fitness_current
