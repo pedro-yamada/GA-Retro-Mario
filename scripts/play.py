@@ -5,7 +5,7 @@ import neat
 import retro 
 
 ## Configuracoes
-winner_path = 'best_models/best_individual.pkl'
+winner_path = 'best_models/best_individual_RUN2.pkl'
 game_name = 'SuperMarioWorld-Snes'
 phase_name = 'YoshiIsland2.state'
 config_file = 'config-feedfoward.txt'

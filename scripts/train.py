@@ -13,5 +13,5 @@ evolution_algorithm = Evolution(
 evolution_algorithm.run(
     num_generations = 25,
     checkpoint_interval = 5,
-    restore_checkpoint = 'checkpoints/neat-checkpoint-19' ## Caso queira usar um checkpoint, passar o caminho do checkpoint salvo
+    restore_checkpoint = 'checkpoints/neat-checkpoint-28' ## Caso queira usar um checkpoint, passar o caminho do checkpoint salvo
 )
