@@ -38,6 +38,39 @@ cp data.json ~/anaconda3/envs/<ENV_NAME>/lib/python3.7/site-packages/retro/data/
 python scripts/random_agent.py
 ```
 
+## Windows
+
+Primeiramente, estamos utilizando o Python na versão `3.7.16`
+
+### Utilizando Conda
+```sh
+conda create -n <ENV_NAME> python=3.7.16
+conda activate <ENV_NAME>
+```
+
+```sh
+pip install -r requirements_windows.txt
+```
+
+### Copie o arquivo do jogo para o diretório
+Execute a seguinte célula após o download e cópia do jogo (no local do diretório):
+
+```sh
+copy rom.sfc ~\Anaconda\envs\<ENV_NAME>\Lib\site-packages\retro\data\stable\SuperMarioWorld-Snes
+```
+
+### Copie o arquivo de dados do jogo para o diretório
+Execute a seguinte celula no terminal (no local do diretório):
+
+```sh
+copy data.json ~\Anaconda\envs\<ENV_NAME>\Lib\site-packages\retro\data\stable\SuperMarioWorld-Snes
+```
+
+### Execute o script de teste
+```sh
+python scripts/random_agent.py
+```
+
 # Rodando o GA
 script modelo em: `scripts/train.py`
 
