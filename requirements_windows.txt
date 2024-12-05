@@ -1,0 +1,15 @@
+certifi==2022.12.7
+cloudpickle==2.2.1
+gym==0.21.0
+gym-notices==0.0.8
+gym-retro==0.8.0
+importlib-metadata==4.13.0
+neat-python==0.92
+numpy==1.21.6
+pip==22.3.1
+pyglet==1.5.27
+setuptools==65.6.3
+typing_extensions==4.7.1
+wheel==0.38.4
+zipp==3.15.0
+opencv-python==4.10.0.84
