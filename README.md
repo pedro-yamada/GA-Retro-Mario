@@ -1,3 +1,11 @@
+# Integrantes
+* Abner Barradas Cândalo - 11202130004
+* Fernanda Scheid Kerservan - 11202230283
+* Guilherme Meira Rebello - 11202130848
+* Ian Nicolas Magatti da Silva - 11201922124
+* Julia Oliveira Pessoa - 11202020267
+* Pedro Paulo Ayala Yamada - 11202020731
+
 # GA-Retro-Mario
 Repositório dedicado ao desenvolvimento de um agente inteligente para resolver a fase YoshiIsland do Super Mario World 2.
 
