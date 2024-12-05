@@ -16,7 +16,7 @@ conda activate <ENV_NAME>
 ```
 
 ```sh
-pip install -r requirements.txt
+pip install -r requirements_linux.txt
 ```
 
 ### Copie o arquivo do jogo para o diretório
